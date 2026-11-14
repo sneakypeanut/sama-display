@@ -1,0 +1,15 @@
+[Unit]
+Description=SAMA cooler CPU/GPU temperature screen
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/sama-display/bin/sama-display --interval 3 --rotation 90 --state-dir %h/.local/state/sama-display
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=5
+UMask=0077
+Environment=RUST_LOG=info
+
+[Install]
+WantedBy=default.target

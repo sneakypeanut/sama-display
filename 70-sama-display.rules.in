@@ -1,0 +1,5 @@
+# Exact known cooler identities only. Substitute @UID@ with the owning numeric UID.
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="1d6b", ATTR{idProduct}=="0121", ATTR{serial}=="20080411", OWNER="@UID@", MODE="0660"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="1a86", ATTR{idProduct}=="ca21", ATTR{serial}=="CT21INCH", OWNER="@UID@", MODE="0660"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1d6b", ATTRS{idProduct}=="0121", ATTRS{serial}=="20080411", OWNER="@UID@", MODE="0660"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="ca21", ATTRS{serial}=="CT21INCH", OWNER="@UID@", MODE="0660"
