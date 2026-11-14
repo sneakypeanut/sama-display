@@ -97,8 +97,8 @@ mod tests {
 
     #[test]
     fn real_480x480_frame_matches_python_reference_wire() {
-        // Golden digests produced by the known-working Python implementation
-        // (scripts/sama-display/sama_display.py) for deterministic buffers.
+        // Golden digests produced by the original Python implementation, which
+        // worked on the hardware, for deterministic buffers.
         let cases = [
             (
                 "range",
